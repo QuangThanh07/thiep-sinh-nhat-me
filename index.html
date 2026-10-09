@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gửi Mẹ Yêu ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffd8e7, #fff1f5, #ffe6c9);
+    color: #a62959;
+    overflow-x: hidden;
+}
+
+.screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(28px, 7vw, 43px);
+    margin: 12px 0;
+}
+
+p {
+    line-height: 1.9;
+}
+
+#envelopeScreen {
+    cursor: pointer;
+}
+
+.envelope {
+    position: relative;
+    width: min(300px, 80vw);
+    height: 195px;
+    margin: 35px auto;
+    background: #f58bb1;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px #c95d8560;
+    transition: transform 0.4s;
+}
+
+.envelope:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 115px solid #ffb4ce;
+    z-index: 2;
+}
+
+.envelope::after {
+    content: "❤️";
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 44px;
+    z-index: 3;
+}
+
+.hint {
+    animation: pulse 1.5s infinite;
+}
+
+#letterScreen {
+    display: none;
+}
+
+.letter {
+    width: min(620px, 100%);
+    padding: 30px 23px;
+    background: #fffaf5;
+    border: 3px solid #f5aac5;
+    border-radius: 25px;
+    box-shadow: 0 12px 40px #b9447540;
+    animation: openLetter 1s ease;
+}
+
+.rose {
+    font-size: 48px;
+    animation: sway 2s infinite ease-in-out;
+}
+
+.message {
+    color: #8b405b;
+    font-size: 17px;
+    line-height: 2;
+}
+
+.signature {
+    color: #d52d70;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button {
+    background: #e94f88;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 5px 15px #e94f8840;
+}
+
+button:hover {
+    background: #c92e6a;
+}
+
+.floating {
+    position: fixed;
+    top: -40px;
+    pointer-events: none;
+    z-index: 10;
+    animation: fall linear forwards;
+}
+
+#effects {
+    display: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes openLetter {
+    from {
+        opacity: 0;
+        transform: scale(0.75) translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes sway {
+    50% { transform: rotate(8deg) scale(1.08); }
+}
+
+@keyframes pulse {
+    50% { transform: scale(1.06); }
+}
+</style>
+</head>
+
+<body>
+
+<section class="screen" id="envelopeScreen"
+         onclick="openLetter()">
+
+    <div style="font-size:35px">🌸 ✨ 🌸</div>
+
+    <h1>Gửi Mẹ Yêu ❤️</h1>
+
+    <p>
+        Con có một món quà nhỏ<br>
+        muốn dành tặng mẹ trong ngày đặc biệt.
+    </p>
+
+    <div class="envelope"></div>
+
+    <h2 class="hint">💌 Mẹ nhấn vào thiệp để mở nhé!</h2>
+
+    <p>Con yêu mẹ nhiều lắm! 🌷</p>
+</section>
+
+<section class="screen" id="letterScreen">
+
+    <div class="letter">
+
+        <div class="rose">💐🌹💐</div>
+
+        <h1>Chúc Mừng Sinh Nhật Mẹ!</h1>
+
+        <h2>🌷 Người mẹ tuyệt vời nhất của con 🌷</h2>
+
+        <div class="message">
+            Mẹ yêu quý của con! ❤️<br><br>
+
+            Nhân ngày sinh nhật mẹ, con chúc mẹ
+            luôn mạnh khỏe, bình an và hạnh phúc.<br>
+
+            Mong mỗi ngày của mẹ đều ngập tràn
+            tiếng cười, niềm vui và những điều tốt đẹp.<br><br>
+
+            Cảm ơn mẹ đã luôn yêu thương,
+            chăm sóc và hy sinh cho con.
+            Con biết rằng có những yêu thương
+            mẹ chẳng bao giờ nói thành lời,
+            nhưng con luôn cảm nhận được tất cả.<br><br>
+
+            Con mong mẹ luôn khỏe mạnh,
+            luôn vui vẻ và mãi ở bên con thật lâu.
+            Sau này con sẽ cố gắng trưởng thành,
+            để mẹ có thể tự hào và yên lòng về con.
+        </div>
+
+        <div class="signature">
+            Con yêu mẹ rất nhiều! ❤️
+        </div>
+
+        <div style="font-size:35px; margin:20px">
+            🎂 🎁 💖 🌹
+        </div>
+
+        <button onclick="celebrate()">
+            🎉 Gửi mẹ ngàn cái ôm!
+        </button>
+
+        <button onclick="history.back()">
+            💌 Xem lại phong bì
+        </button>
+
+    </div>
+</section>
+
+<div id="effects"></div>
+
+<script>
+function openLetter() {
+    document.getElementById("envelopeScreen").style.display = "none";
+    document.getElementById("letterScreen").style.display = "flex";
+
+    document.getElementById("effects").style.display = "block";
+
+    celebrate();
+}
+
+function celebrate() {
+    const decorations = [
+        "❤️", "💕", "🌸", "🌹",
+        "✨", "💖", "🎊", "🎉", "🌷"
+    ];
+
+    for (let i = 0; i < 65; i++) {
+        const item = document.createElement("div");
+
+        item.className = "floating";
+        item.textContent =
+            decorations[Math.floor(Math.random() * decorations.length)];
+
+        item.style.left = Math.random() * 100 + "vw";
+        item.style.fontSize = (16 + Math.random() * 24) + "px";
+        item.style.animationDuration = (3 + Math.random() * 5) + "s";
+        item.style.animationDelay = Math.random() * 2 + "s";
+
+        document.body.appendChild(item);
+
+        setTimeout(() => item.remove(), 11000);
+    }
+}
+</script>
+
+</body>
+</html>
